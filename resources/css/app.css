@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-label {
+    @apply block uppercase text-gray-500 text-xs font-bold mb-1;
+  }
+  .form-input {
+    @apply flex-1 p-3 block text-sm bg-white placeholder-gray-400 text-gray-700 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out sm:leading-5;
+  }
+  .form-file {
+    @apply flex-1 block text-sm bg-white placeholder-gray-400 text-gray-700 border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out sm:leading-5;
+  }
+  input[type="file"]::-webkit-file-upload-button,
+  input[type="file"]::file-selector-button {
+    @apply text-white bg-gray-700 hover:bg-gray-600 font-medium text-sm cursor-pointer border-0 py-2.5 pl-8 pr-4;
+    margin-inline-start: -1rem;
+    margin-inline-end: 1rem;
+  }
+  .form-checkbox {
+    @apply focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded;
+  }
+  .form-textarea {
+    @apply shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300;
+  }
+  .form-submit {
+    @apply bg-indigo-500 text-white font-bold uppercase text-xs px-4 py-2 shadow outline-none cursor-pointer hover:shadow-md focus:outline-none;
+  }
+  .form-error {
+    @apply mt-2 text-sm text-red-600;
+  }
+  .subtitle-edit {
+    @apply mt-6 mb-4 text-sm font-bold uppercase tracking-widest text-indigo-600 border-b-4 border-indigo-200;
+  }
+  .btn-action {
+    @apply inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent font-semibold text-xs text-white tracking-widest hover:bg-gray-700 focus:outline-none focus:border-gray-900 disabled:opacity-25 active:bg-gray-900 transition ease-in-out duration-150;
+  }
+  .recap {
+    @apply text-justify text-sm text-gray-600 whitespace-pre-wrap font-cse;
+  }
+  .recap ul {
+    @apply list-disc list-inside;
+  }
+  .recap ol {
+    @apply list-decimal list-inside;
+  }
+  .recap pre {
+    @apply text-xs whitespace-normal font-mono;
+  }
+  .recap blockquote {
+    @apply py-1 px-2 my-1 bg-gray-200 border-l-4 border-gray-400;
+  }
+  .recap h1 {
+    @apply mb-1 text-base font-bold;
+  }
+}

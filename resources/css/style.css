@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-base: #397;
+  }
+  .text-presence {
+    color: #015b99;
+  }
+  .bg-presence {
+    background-color: #015b99;
+  }
+}
+
+@layer components {
+  .menu-link {
+    @apply flex mx-2 p-3  text-sm font-semibold text-gray-600 relative border-b-4 border-transparent lg:inline-block hover:text-gray-800 hover:border-gray-200 transition duration-500 ease-in-out;
+  }
+  .input-projet {
+    @apply text-xl py-1 px-2 mx-2 bg-white placeholder-gray-400 text-presence border-b rounded-none border-gray-300 focus:outline-none focus:ring-0 focus:border-red-300 sm:leading-5;
+  }
+  .input-text {
+    @apply text-lg py-2 px-3 block w-full bg-white placeholder-gray-400 text-presence border rounded-none border-gray-300 focus:outline-none focus:ring-0 focus:border-red-300 sm:leading-5;
+  }
+  .btn-primary {
+    @apply inline-flex justify-center py-2 px-9 border border-transparent rounded-md text-lg font-bold text-white bg-presence hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-offset-1 focus:ring-red-300;
+  }
+  .form-label {
+    @apply block text-sm font-medium text-gray-600;
+  }
+  .resa-container {
+    @apply container mx-auto bg-white shadow-md p-6 text-lg space-y-6 rounded-sm;
+  }
+  .resa-title {
+    @apply mb-6 py-1 px-3 text-presence text-xl font-bold bg-gray-100;
+  }
+  .resa-error {
+    @apply text-xs pt-1 text-red-600;
+  }
+  .card-home {
+    @apply flex-1 mb-10 relative h-72 overflow-hidden rounded-md;
+  }
+  .card-home-text {
+    @apply absolute top-0 flex flex-col h-full text-white text-lg bg-presence rounded-md md:top-56 md:hover:bg-black md:hover:opacity-70 md:hover:top-0 transition-all duration-200 ease-in-out;
+  }
+}
+
+.DayPicker {
+  border: 1px solid #e5e7eb;
+}
+.DayPicker-Month {
+  margin: 1rem 1.5rem 0 1.5rem !important;
+}
+.DayPicker-Caption {
+  font-size: 0.9rem !important;
+}
+.DayPicker-Weekday {
+  font-size: 0.7rem !important;
+}
+.DayPicker-Day {
+  font-size: 0.85rem !important;
+  border-radius: 0 !important;
+}
+.DayPicker-Day:hover {
+  cursor: pointer;
+  background-color: #fef2f2 !important;
+}
+.DayPicker-Day--today {
+  color: #dc2626 !important;
+  font-weight: bold;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  position: relative;
+  color: #fff !important;
+  background-color: #dc2626 !important;
+}
+.DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+  background-color: #fca5a5 !important;
+  color: #fff !important;
+}
+.DayPicker-Day--end {
+  font-weight: bold;
+  border-bottom-right-radius: 50% !important;
+  border-top-right-radius: 50% !important;
+}
+.DayPicker-Day--start {
+  border-bottom-left-radius: 50% !important;
+  border-top-left-radius: 50% !important;
+  font-weight: bold;
+}
+.DayPicker-Caption select {
+  padding: 3px 20px 3px 5px !important;
+  font-size: 0.9rem !important;
+  background-position: right 0.2rem center !important;
+  border-color: #d1d5db !important;
+}
+.DayPicker-Caption select[name="month"] {
+  width: 65%;
+}
+.DayPicker-Caption select[name="year"] {
+  width: 35%;
+  border-left: none;
+}
+.DayPicker-NavButton {
+  margin-top: 0 !important;
+  top: 1.2rem !important;
+}
+.DayPicker-NavButton--prev {
+  left: 5px !important;
+  margin-right: 0 !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 40' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M18 32l-12-12 12-12' /%3E%3C/svg%3E") !important;
+}
+.DayPicker-NavButton--next {
+  right: 5px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 40' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M8 8l12 12-12 12' /%3E%3C/svg%3E") !important;
+}
